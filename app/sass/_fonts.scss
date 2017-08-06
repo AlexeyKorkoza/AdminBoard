@@ -1,0 +1,61 @@
+@import "_mixins.scss";
+
+/*
+  Lato
+*/
+
+@include font-face('LatoRegular', '../fonts/Lato/LatoRegular');
+@include font-face('LatoBold', '../fonts/Lato/LatoBold');
+@include font-face('LatoItalic', '../fonts/Lato/LatoItalic');
+@include font-face('LatoLight', '../fonts/Lato/LatoLight');
+@include font-face('LatoBoldItalic', '../fonts/Lato/LatoBoldItalic');
+@include font-face('LatoLightItalic', '../fonts/Lato/LatoLightItalic');
+
+/*
+  Raleway
+*/
+
+@include font-face('RalewayRegular', '../fonts/Raleway/RalewayRegular');
+@include font-face('RalewayThin', '../fonts/Raleway/RalewayThin');
+@include font-face('RalewayExtraLight', '../fonts/Raleway/RalewayExtraLight');
+@include font-face('RalewayLight', '../fonts/Raleway/RalewayLight');
+@include font-face('RalewayMedium', '../fonts/Raleway/RalewayMedium');
+@include font-face('RalewaySemiBold', '../fonts/Raleway/RalewaySemiBold');
+@include font-face('RalewayBold', '../fonts/Raleway/RalewayBold');
+@include font-face('RalewayExtraBold', '../fonts/Raleway/RalewayExtraBold');
+@include font-face('RalewayBlack', '../fonts/Raleway/RalewayBlack');
+@include font-face('RalewayBold', '../fonts/Raleway/RalewayBold');
+
+/*
+  OpenSans
+*/
+
+@include font-face('OpenSansRegular', '../fonts/OpenSans/OpenSansRegular');
+@include font-face('OpenSansLight', '../fonts/OpenSans/OpenSansLight');
+@include font-face('OpenSansItalic', '../fonts/OpenSans/OpenSansItalic');
+@include font-face('OpenSansBold', '../fonts/OpenSans/OpenSansBold');
+@include font-face('OpenSansExtraBold', '../fonts/OpenSans/OpenSansExtraBold');
+@include font-face('OpenSansExtraBoldItalic', '../fonts/OpenSans/OpenSansExtraBoldItalic');
+@include font-face('OpenSansRegularItalic', '../fonts/OpenSans/OpenSansRegularItalic');
+@include font-face('OpenSansSemiBold', '../fonts/OpenSans/OpenSansSemiBold');
+@include font-face('OpenSansSemiBoldItalic', '../fonts/OpenSans/OpenSansSemiBoldItalic');
+
+/*
+  Roboto
+*/
+
+@include font-face('RobotoRegular', '../fonts/Roboto/RobotoRegular');
+@include font-face('RobotoLight', '../fonts/Roboto/RobotoLight');
+@include font-face('RobotoMedium', '../fonts/Roboto/RobotoMedium');
+@include font-face('RobotoBold', '../fonts/Roboto/RobotoBold');
+
+/*
+  RobotoBlack
+*/
+
+@font-face {
+  font-family: RobotoBlack;
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/Roboto/RobotoBlack.ttf') format('truetype')
+}

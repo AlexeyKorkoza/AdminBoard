@@ -16,6 +16,10 @@ const del = require('del');
 const cssnano = require('gulp-cssnano');
 const babel = require("gulp-babel");
 
+const cssLibs = [
+    '../node_modules/font-awesome/css/font-awesome.min.css'
+];
+
 gulp.task('connect', function() {
     connect.server({
         root: 'app',
@@ -24,10 +28,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('sass', () => {
-    return gulp.src([
-        'app/sass/_*.scss',
-        'app/sass/*.scss'
-    ])
+    return gulp.src('app/sass/styles.scss')
     .pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
     .pipe(concat('main.css'))
     .pipe(rename({ suffix: '.min', prefix: '' }))
@@ -55,8 +56,7 @@ gulp.task('scripts', ['babel'], () => {
 });
 
 gulp.task('css-libs', () => {
-    return gulp.src([
-        ])
+    return gulp.src(cssLibs)
         .pipe(concat('libs.css'))
         .pipe(rename({ suffix: '.min', prefix: '' }))
         .pipe(gulp.dest('app/css'));
