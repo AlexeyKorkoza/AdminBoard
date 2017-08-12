@@ -4,10 +4,10 @@ const gulp = require('gulp');
 const watch = require('gulp-watch');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
-const cssmin = require('gulp-minify-css');
+const cssmin = require('gulp-cssmin');
 const concat = require('gulp-concat');
 const csslint = require('gulp-csslint');
-const connect = require('gulp-connect');
+const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
 const jscpd = require('gulp-jscpd');
 const rename = require('gulp-rename');
@@ -20,20 +20,23 @@ const cssLibs = [
     '../node_modules/font-awesome/css/font-awesome.min.css'
 ];
 
-gulp.task('connect', function() {
-    connect.server({
-        root: 'app',
-        livereload: true
+gulp.task('browser-sync', function() {
+    browserSync({
+        server: {
+            baseDir: 'app'
+        },
+        notify: false
     });
 });
-
 gulp.task('sass', () => {
     return gulp.src('app/sass/**/*.scss')
     .pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
     .pipe(concat('main.css'))
     .pipe(rename({ suffix: '.min', prefix: '' }))
+    .pipe(autoprefixer(['last 15 versions']))
+    .pipe(cssmin())
     .pipe(gulp.dest('app/css'))
-    .pipe(connect.reload());
+    .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('babel', () => {
@@ -52,7 +55,7 @@ gulp.task('scripts', ['babel'], () => {
         .pipe(rename({ suffix: '.min', prefix: '' }))
         .pipe(uglify())
         .pipe(gulp.dest('app/js'))
-        .pipe(connect.reload());
+        .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('css-libs', () => {
@@ -62,15 +65,10 @@ gulp.task('css-libs', () => {
         .pipe(gulp.dest('app/css'));
 });
 
-gulp.task('html', () => {
-    return gulp.src('app/index.html')
-        .pipe(connect.reload());
-});
-
-gulp.task('watch', ['css-libs', 'scripts'], () => {
+gulp.task('watch', ['css-libs', 'sass', 'scripts', 'browser-sync'], () => {
     gulp.watch('app/sass/*', ['sass']);
     gulp.watch('app/js/script.js', ['scripts']);
-    gulp.watch('app/index.html', ['html']);
+    gulp.watch('app/index.html', browserSync.reload);
 });
 
 gulp.task('build', ['clean', 'sass', 'scripts'], () => {
@@ -103,4 +101,4 @@ gulp.task('clear', () => {
     return cache.clearAll();
 })
 
-gulp.task('default', ['connect', 'watch']);
+gulp.task('default', ['watch']);
