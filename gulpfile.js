@@ -28,7 +28,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('sass', () => {
-    return gulp.src('app/sass/styles.scss')
+    return gulp.src('app/sass/**/*.scss')
     .pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
     .pipe(concat('main.css'))
     .pipe(rename({ suffix: '.min', prefix: '' }))
