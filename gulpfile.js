@@ -17,7 +17,8 @@ const cssnano = require('gulp-cssnano');
 const babel = require("gulp-babel");
 
 const cssLibs = [
-    '../node_modules/font-awesome/css/font-awesome.min.css'
+    'node_modules/font-awesome/css/font-awesome.min.css',
+    'node_modules/bootstrap-grid/dist/grid.min.css'
 ];
 
 gulp.task('browser-sync', function() {
