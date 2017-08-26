@@ -1,0 +1,155 @@
+@import "_fonts.scss";
+
+
+/*
+  Login
+*/
+
+body {
+    background: #447c56;
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+
+    .kanto {
+        text-align: center;
+        letter-spacing: 7px;
+        font: 40pt "LatoRegular";
+        color: white;
+
+        img {
+            margin-right: 20px;
+        }
+    }
+
+    .login {
+        padding: 35px 25px 80px;
+        border-radius: 20px;
+        background: #ffffff;
+
+        .login_input {
+
+            input {
+                padding: 0 0 15px 10px;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid #e0e0e0;
+                color: #a0a0a0;
+                font: 13pt "LatoRegular";
+
+                &:last-of-type {
+                    position: relative;
+                    margin-bottom: 25px;
+
+                    &:after {
+                        content: '../icons/Eya-Icon.png';
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .login_button {
+
+            button {
+                width: 100%;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+                padding: 15px 0;
+                text-align: center;
+                background: #434a5f;
+                color: #fff;
+                font: 18pt "LatoBold";
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .password {
+            font: 18pt "LatoRegular";
+            color: #8e8e8e;
+            text-align: center;
+        }
+
+        .or {
+            width: 100%;
+            margin: 22px auto 0;
+
+            .line {
+                position: relative;
+                z-index: 1;
+                border-top: 1px solid #e3e3e3;
+            }
+
+            span {
+                position: relative;
+                top: -15px;
+                z-index: 2;
+                display: table;
+                margin: 0 auto;
+                padding: 2px;
+                border-radius: 25px;
+                background: #504d67;
+                font: 14pt "LatoBold";
+                color: #fff;
+            }
+        }
+
+        .auth_social {
+
+            .continue {
+                color: #7d7d7d;
+                text-align: center;
+                font: 10pt "LatoRegular";
+            }
+
+            .auth_social__buttons {
+
+                .linkedin,
+                .google {
+                    width: 100%;
+                    padding: 15px 45px;
+                    border-radius: 10px;
+                    outline: none;
+                    border: none;
+                    font: 20pt "LatoRegular";
+                    color: #fff;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    img {
+                        margin-right: 10px;
+                    }
+                }
+
+                .linkedin {
+                    background: #55acee;
+                    margin-bottom: 15px;
+                }
+
+                .google {
+                    background: #dd4b39;
+                }
+            }
+        }
+    }
+}
