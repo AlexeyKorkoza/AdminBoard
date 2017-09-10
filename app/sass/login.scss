@@ -1,6 +1,5 @@
 @import "_fonts.scss";
 
-
 /*
   Login
 */
@@ -19,11 +18,13 @@ body {
     .kanto {
         text-align: center;
         letter-spacing: 7px;
-        font: 40pt "LatoRegular";
+        font: 40pt LatoRegular;
         color: white;
 
         img {
-            margin-right: 20px;
+          width: 50px;
+          height: 50px;
+          margin-right: 20px;
         }
     }
 
@@ -33,29 +34,29 @@ body {
         background: #ffffff;
 
         .login_input {
+          position: relative;
+          overflow: hidden;
+          margin-bottom: 25px;
 
-            input {
+            .login_input_text,
+            .login_input_password{
+                width: 100%;
                 padding: 0 0 15px 10px;
                 outline: none;
                 border: none;
                 border-bottom: 1px solid #e0e0e0;
-                color: #a0a0a0;
-                font: 13pt "LatoRegular";
-
-                &:last-of-type {
-                    position: relative;
-                    margin-bottom: 25px;
-
-                    &:after {
-                        content: '../icons/Eya-Icon.png';
-                        position: absolute;
-                        right: 0;
-                    }
-                }
+                color: #adadad;
+                font: 13pt LatoRegular;
 
                 &:focus {
                     outline: none;
                 }
+            }
+
+            .eye_icon {
+                 position: absolute;
+                 top: 8px;
+                 right: 0;
             }
         }
 
@@ -70,27 +71,28 @@ body {
                 text-align: center;
                 background: #434a5f;
                 color: #fff;
-                font: 18pt "LatoBold";
+                font: 15pt LatoBold;
 
                 &:focus {
                     outline: none;
                 }
 
                 &:hover {
+                    background: #223a5e;
                     cursor: pointer;
                 }
             }
         }
 
-        .password {
-            font: 18pt "LatoRegular";
+        .forgot_password {
+            font: 18pt LatoRegular;
             color: #8e8e8e;
             text-align: center;
         }
 
         .or {
             width: 100%;
-            margin: 22px auto 0;
+            margin: 46px auto 0;
 
             .line {
                 position: relative;
@@ -104,11 +106,16 @@ body {
                 z-index: 2;
                 display: table;
                 margin: 0 auto;
-                padding: 2px;
-                border-radius: 25px;
+                padding: 4px;
+                width: 20px;
+                height: 20px;
+                -moz-border-radius: 50px;
+                -webkit-border-radius: 50px;
+                border-radius: 50px;
                 background: #504d67;
-                font: 14pt "LatoBold";
+                font: 14pt LatoBold;
                 color: #fff;
+                text-align: center;
             }
         }
 
@@ -117,7 +124,7 @@ body {
             .continue {
                 color: #7d7d7d;
                 text-align: center;
-                font: 10pt "LatoRegular";
+                font: 12pt LatoRegular;
             }
 
             .auth_social__buttons {
@@ -129,7 +136,7 @@ body {
                     border-radius: 10px;
                     outline: none;
                     border: none;
-                    font: 20pt "LatoRegular";
+                    font: 15pt LatoRegular;
                     color: #fff;
 
                     &:hover {
@@ -144,10 +151,18 @@ body {
                 .linkedin {
                     background: #55acee;
                     margin-bottom: 15px;
+
+                    &:hover {
+                      background: #4F84C4;
+                    }
                 }
 
                 .google {
                     background: #dd4b39;
+
+                    &:hover {
+                      background: #DC4C46;
+                    }
                 }
             }
         }
