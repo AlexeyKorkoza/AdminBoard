@@ -49,7 +49,9 @@ gulp.task('babel', () => {
 
 gulp.task('scripts', ['babel'], () => {
     return gulp.src([
-        'app/js/script.es5.js'
+            'node_modules/jquery/dist/jquery.min.js',
+            'node_modules/jquery-validation/dist/jquery.validate.min.js',
+            'app/js/script.es5.js'
         ])
         .on('error', console.log)
         .pipe(concat('scripts.js'))

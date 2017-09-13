@@ -47,11 +47,18 @@ body {
                 border: none;
                 border-bottom: 1px solid #e0e0e0;
                 color: #adadad;
-                font: 13pt LatoRegular;
+                font: 13pt "LatoRegular";
 
                 &:focus {
                     outline: none;
+                    color: #000;
                 }
+            }
+
+            #password-error,
+            #username-error {
+              font: italic 13pt "LatoRegular";
+              color: red;
             }
 
             .eye_icon {

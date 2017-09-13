@@ -13,16 +13,16 @@
         <div class="modal_container">
             <h1 class="kanto"><img src="img/Shape.png"><span>kanto</span></h1>
             <div class="login">
-                <form>
+                <form name="login">
                     <div class="login_input">
-                        <input type="text" class="login_input_text" placeholder="User Name">
+                        <input type="text" id="username" name="username" class="login_input_text" placeholder="User Name">
                     </div>
                     <div class="login_input">
-                        <input type="text" class="login_input_password" placeholder="Password">
+                        <input type="password" id="password" name="password" class="login_input_password" placeholder="Password">
                         <img src="icons/Eye-Icon.png" alt="eye-icon" class="eye_icon"/>
                     </div>
                     <div class="login_button">
-                        <button>Sign In</button>
+                        <button onclick="authLocal()">Sign In</button>
                     </div>
                     <p class="forgot_password">Forgot Password?</p>
                 </form>
@@ -35,13 +35,15 @@
                 <div class="auth_social">
                     <p class="continue">Continue With</p>
                     <div class="auth_social__buttons">
-                        <button class="linkedin"><img src="icons/Linkedin-Icon.png">linkedin</button>
-                        <button class="google"><img src="icons/Google-Icon.png">Google</button>
+                        <button class="linkedin" onclick="authLinkedin()"><img src="icons/Linkedin-Icon.png">linkedin</button>
+                        <button class="google" onclick="authGoogle()"><img src="icons/Google-Icon.png">Google</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
+<script src="js/scripts.min.js"></script>
 
 </html>

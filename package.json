@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "bootstrap-grid": "^2.0.1",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "jquery-validation": "^1.17.0"
   }
 }
