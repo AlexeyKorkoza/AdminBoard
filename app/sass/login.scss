@@ -15,169 +15,173 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
+}
 
-    .kanto {
-        text-align: center;
-        letter-spacing: 7px;
-        font: 40pt LatoRegular;
-        color: white;
+.kanto {
+    text-align: center;
+    letter-spacing: 7px;
+    font: 40pt LatoRegular;
+    color: white;
 
-        img {
-            width: 50px;
-            height: 50px;
-            margin-right: 20px;
+    img {
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+    }
+}
+
+.login {
+    padding: 35px 25px 80px;
+    border-radius: 20px;
+    background: #ffffff;
+
+    .login_input {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 25px;
+
+        .login_input_text,
+        .login_input_password {
+            width: 100%;
+            padding: 0 0 15px 10px;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #e0e0e0;
+            color: #adadad;
+            font: 13pt "LatoRegular";
+
+            &:focus {
+                outline: none;
+                color: #000;
+            }
+        }
+
+        #password-error,
+        #username-error {
+            font: italic 13pt "LatoRegular";
+            color: red;
+        }
+
+        .eye_icon {
+            position: absolute;
+            top: 8px;
+            right: 0;
         }
     }
 
-    .login {
-        padding: 35px 25px 80px;
-        border-radius: 20px;
-        background: #ffffff;
+    .login_button {
 
-        .login_input {
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 25px;
-
-            .login_input_text,
-            .login_input_password {
-                width: 100%;
-                padding: 0 0 15px 10px;
-                outline: none;
-                border: none;
-                border-bottom: 1px solid #e0e0e0;
-                color: #adadad;
-                font: 13pt "LatoRegular";
-
-                &:focus {
-                    outline: none;
-                    color: #000;
-                }
-            }
-
-            #password-error,
-            #username-error {
-              font: italic 13pt "LatoRegular";
-              color: red;
-            }
-
-            .eye_icon {
-                position: absolute;
-                top: 8px;
-                right: 0;
-            }
-        }
-
-        .login_button {
-
-            button {
-                width: 100%;
-                border-radius: 10px;
-                outline: none;
-                border: none;
-                padding: 15px 0;
-                text-align: center;
-                background: #434a5f;
-                color: #fff;
-                font: 15pt LatoBold;
-
-                &:focus {
-                    outline: none;
-                }
-
-                &:hover {
-                    background: #223a5e;
-                    cursor: pointer;
-                }
-            }
-        }
-
-        .forgot_password {
-            font: 18pt LatoRegular;
-            color: #8e8e8e;
-            text-align: center;
-        }
-
-        .or {
+        button {
             width: 100%;
-            margin: 46px auto 0;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            padding: 15px 0;
+            text-align: center;
+            background: #434a5f;
+            color: #fff;
+            font: 15pt LatoBold;
 
-            .line {
-                position: relative;
-                z-index: 1;
-                border-top: 1px solid #e3e3e3;
+            &:focus {
+                outline: none;
             }
 
-            .wrapper {
-                padding: 0 5px;
-                background: white;
-                position: relative;
-                z-index: 2;
-                padding: 0 10px;
-                width: fit-content;
-                position: relative;
-                top: -2px;
-                left: 40.55%;
-
-                span {
-                    position: relative;
-                    top: -8px;
-                    padding: 4px;
-                    -webkit-border-radius: 50px;
-                    border-radius: 50px;
-                    background: #504d67;
-                    font: 10pt "LatoBold";
-                    color: #fff;
-                }
+            &:hover {
+                background: #223a5e;
+                cursor: pointer;
             }
         }
+    }
 
-        .auth_social {
+    .forgot_password {
+        font: 18pt LatoRegular;
+        color: #8e8e8e;
+        text-align: center;
+    }
 
-            .continue {
-                color: #7d7d7d;
-                text-align: center;
-                font: 12pt LatoRegular;
-            }
+    .or {
+        width: 100%;
+        margin: 46px auto 0;
 
-            .auth_social__buttons {
+        .line {
+            position: relative;
+            z-index: 1;
+            border-top: 1px solid #e3e3e3;
+        }
 
-                .linkedin,
-                .google {
-                    width: 100%;
-                    padding: 15px 45px;
-                    border-radius: 10px;
-                    outline: none;
-                    border: none;
-                    font: 15pt LatoRegular;
-                    color: #fff;
+        .wrapper {
+            padding: 0 5px;
+            background: white;
+            position: relative;
+            z-index: 2;
+            padding: 0 10px;
+            width: fit-content;
+            position: relative;
+            top: -2px;
+            left: 40.55%;
 
-                    &:hover {
-                        cursor: pointer;
-                    }
-
-                    img {
-                        margin-right: 10px;
-                    }
-                }
-
-                .linkedin {
-                    background: #55acee;
-                    margin-bottom: 15px;
-
-                    &:hover {
-                        background: #4F84C4;
-                    }
-                }
-
-                .google {
-                    background: #dd4b39;
-
-                    &:hover {
-                        background: #DC4C46;
-                    }
-                }
+            span {
+                position: relative;
+                top: -8px;
+                padding: 4px;
+                -webkit-border-radius: 50px;
+                border-radius: 50px;
+                background: #504d67;
+                font: 10pt "LatoBold";
+                color: #fff;
             }
         }
     }
 }
+
+.auth_social {
+
+    .continue {
+        color: #7d7d7d;
+        text-align: center;
+        font: 12pt LatoRegular;
+    }
+
+    .auth_social__buttons {
+        display: flex;
+        flex-direction: column;
+
+        .linkedin,
+        .google {
+            width: 100%;
+            padding: 15px 45px;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            font: 15pt LatoRegular;
+            color: #fff;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            img {
+                margin-right: 10px;
+            }
+        }
+
+        .linkedin {
+            background: #55acee;
+            margin-bottom: 15px;
+
+            &:hover {
+                background: #4F84C4;
+            }
+        }
+
+        .google {
+            background: #dd4b39;
+
+            &:hover {
+                background: #DC4C46;
+            }
+        }
+    }
+}
+
+@import "_media";
