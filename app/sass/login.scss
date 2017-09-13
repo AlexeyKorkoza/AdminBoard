@@ -1,5 +1,6 @@
 @import "_fonts.scss";
 
+
 /*
   Login
 */
@@ -22,9 +23,9 @@ body {
         color: white;
 
         img {
-          width: 50px;
-          height: 50px;
-          margin-right: 20px;
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
         }
     }
 
@@ -34,12 +35,12 @@ body {
         background: #ffffff;
 
         .login_input {
-          position: relative;
-          overflow: hidden;
-          margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 25px;
 
             .login_input_text,
-            .login_input_password{
+            .login_input_password {
                 width: 100%;
                 padding: 0 0 15px 10px;
                 outline: none;
@@ -54,9 +55,9 @@ body {
             }
 
             .eye_icon {
-                 position: absolute;
-                 top: 8px;
-                 right: 0;
+                position: absolute;
+                top: 8px;
+                right: 0;
             }
         }
 
@@ -100,22 +101,27 @@ body {
                 border-top: 1px solid #e3e3e3;
             }
 
-            span {
+            .wrapper {
+                padding: 0 5px;
+                background: white;
                 position: relative;
-                top: -15px;
                 z-index: 2;
-                display: table;
-                margin: 0 auto;
-                padding: 4px;
-                width: 20px;
-                height: 20px;
-                -moz-border-radius: 50px;
-                -webkit-border-radius: 50px;
-                border-radius: 50px;
-                background: #504d67;
-                font: 14pt LatoBold;
-                color: #fff;
-                text-align: center;
+                padding: 0 10px;
+                width: fit-content;
+                position: relative;
+                top: -2px;
+                left: 40.55%;
+
+                span {
+                    position: relative;
+                    top: -8px;
+                    padding: 4px;
+                    -webkit-border-radius: 50px;
+                    border-radius: 50px;
+                    background: #504d67;
+                    font: 10pt "LatoBold";
+                    color: #fff;
+                }
             }
         }
 
@@ -153,7 +159,7 @@ body {
                     margin-bottom: 15px;
 
                     &:hover {
-                      background: #4F84C4;
+                        background: #4F84C4;
                     }
                 }
 
@@ -161,7 +167,7 @@ body {
                     background: #dd4b39;
 
                     &:hover {
-                      background: #DC4C46;
+                        background: #DC4C46;
                     }
                 }
             }
